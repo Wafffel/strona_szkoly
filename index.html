@@ -13,68 +13,78 @@
       </header>
       <nav>
           <ul>
-              <li><a href="#aktualnosci">Aktualności</a></li>
-              <li><a href="#o-szkole">O Szkole</a></li>
-              <li><a href="#strefa-ucznia">Strefa ucznia</a></li>
-              <li><a href="#strefa-rodzica">Strefa rodzica</a></li>
-              <li><a href="#strefa-kandydata">Strefa kandydata</a></li>
-              <li><a href="#strefa-pracodawcy">Strefa pracodawcy</a></li>
-              <li><a href="#kontakt">Kontakt</a></li>
+              <li><a onclick="showTab('aktualnosci')">Aktualności</a></li>
+              <li><a onclick="showTab('o-szkole')">O Szkole</a></li>
+              <li><a onclick="showTab('dokumenty')">Dokumenty</a></li>
+              <li><a onclick="showTab('kontakt')">Kontakt</a></li>
+              <li><a href="https://uonetplus.vulcan.net.pl/warszawamokotow">Dziennik</a></li>
+              <li><a href="https://planlekcji.staff.edu.pl">Plan Lekcji</a></li>
           </ul>
       </nav>
       <main>
-          <section id="info">
-              <h2>Informacje o szkole</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer neque justo, lobortis et varius dictum, cursus vel ex. Vestibulum finibus gravida dictum. Phasellus semper metus ex, et gravida nulla vehicula eu. In in dolor et magna vulputate cursus. Praesent ac sem massa. Mauris non fermentum purus, sit amet porttitor urna. Sed sed egestas lorem, nec consequat lectus. Morbi ac convallis lectus. Aliquam tristique diam vel nisi imperdiet, ullamcorper lacinia arcu dapibus. Proin ultrices at eros id pharetra.</p>
+          <section id="aktualnosci" class="tab-content">
+              <h2>Aktualności</h2>
+              <div id="news-grid">
+                  <div class="news-item">
+                      <h3>Post 1</h3>
+                      <p>Krótki opis najnowszego newsa.</p>
+                  </div>
+                  <div class="news-item">
+                      <h3>Post 2</h3>
+                      <p>Krótki opis najnowszego newsa.</p>
+                  </div>
+                  <div class="news-item">
+                      <h3>Post 3</h3>
+                      <p>Krótki opis najnowszego newsa.</p>
+                  </div>
+                  <div class="news-item">
+                      <h3>Post 4</h3>
+                      <p>Krótki opis najnowszego newsa.</p>
+                  </div>
+                  <div class="news-item">
+                      <h3>Post 5</h3>
+                      <p>Krótki opis najnowszego newsa.</p>
+                  </div>
+                  <div class="news-item">
+                      <h3>Post 6</h3>
+                      <p>Krótki opis najnowszego newsa.</p>
+                  </div>
+                  <div class="news-item">
+                      <h3>Post 7</h3>
+                      <p>Krótki opis najnowszego newsa.</p>
+                  </div>
+                  <div class="news-item">
+                      <h3>Post 8</h3>
+                      <p>Krótki opis najnowszego newsa.</p>
+                  </div>
+              </div>
           </section>
-          <section id="buttons">
-              <button>Dziennik</button>
-              <button>Zastępstwa</button>
-              <button>Plan Lekcji</button>
-              <button>Dokumnety</button>
-              <button>Samorząd</button>
-              <button>Certyfikaty</button>
-              <button>Konkursy</button>
-              <button>Biblioteka</button>
-              <button>Projekty</button>
+          <section id="o-szkole" class="tab-content">
+              <h2>O Szkole</h2>
+              <p>Tu będą informacje o szkole.</p>
           </section>
-          <section id="news-grid">
-              <div class="news-item">
-                  <h3>Post 1</h3>
-                  <p>Krótki opis najnowszego newsa.</p>
-              </div>
-              <div class="news-item">
-                  <h3>Post 2</h3>
-                  <p>Krótki opis najnowszego newsa.</p>
-              </div>
-              <div class="news-item">
-                  <h3>Post 3</h3>
-                  <p>Krótki opis najnowszego newsa.</p>
-              </div>
-              <div class="news-item">
-                  <h3>Post 4</h3>
-                  <p>Krótki opis najnowszego newsa.</p>
-              </div>
-              <div class="news-item">
-                  <h3>Post 5</h3>
-                  <p>Krótki opis najnowszego newsa.</p>
-              </div>
-              <div class="news-item">
-                <h3>Post 6</h3>
-                <p>Krótki opis najnowszego newsa.</p>
-              </div>
-             <div class="news-item">
-                <h3>Post 7</h3>
-                <p>Krótki opis najnowszego newsa.</p>
-              </div>
-              <div class="news-item">
-                <h3>Post 8</h3>
-                <p>Krótki opis najnowszego newsa.</p>
-              </div>
+          <section id="dokumenty" class="tab-content">
+              <h2>Dokumenty</h2>
+              <p>Tu będą dokumenty szkoły.</p>
+          </section>
+          <section id="kontakt" class="tab-content">
+              <h2>Kontakt</h2>
+              <p>Tu będą informacje kontaktowe szkoły.</p>
           </section>
       </main>
       <footer>
           <p>Wszelkie prawa zastrzeżone.</p>
       </footer>
+      <script>
+          function showTab(tabId) {
+              const tabs = document.getElementsByClassName('tab-content');
+              for (let tab of tabs) {
+                  tab.style.display = 'none';
+              }
+              document.getElementById(tabId).style.display = 'block';
+          }
+
+          showTab('aktualnosci');
+      </script>
   </body>
   </html>

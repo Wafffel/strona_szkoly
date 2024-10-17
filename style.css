@@ -85,3 +85,9 @@ footer {
     color: #9c0000;
     margin-top: 0;
 }
+
+a {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
